@@ -1,12 +1,362 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title> Biscuits for my Biscuit</title>
-         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-     <link rel="stylesheet" href="index.css">
+  <!-- Basic page setup for browser compatibility and responsive sizing -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sebastian Lopez | Portfolio</title>
+  <meta name="description" content="Sebastian Lopez portfolio website showcasing software, data, accounting systems, and web development projects." />
 </head>
 <body>
-    <h1>hello world</h1>
+  <!-- Main navigation bar. Each link jumps to a section on this same page. -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="logo" href="#top" aria-label="Sebastian Lopez home">
+        <span class="logo-mark">SL</span>
+        <span>Sebastian Lopez</span>
+      </a>
+
+      <!-- This button appears on mobile and opens/closes the navigation links -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation">Menu</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <!-- Hero section: first thing recruiters see when the site loads -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="eyebrow">Software • Data • Accounting Systems</div>
+          <h1>Building clean tools that turn messy workflows into <span class="gradient-text">simple systems.</span></h1>
+          <p>
+            I’m Sebastian Lopez, a computer science student and bookkeeper/software specialist focused on web development,
+            automation, data, and business systems. I work with JavaScript, HTML/CSS, Firebase, Sanity CMS, Python, Excel,
+            and I’m currently building my SQL skills.
+          </p>
+
+          <!-- Primary call-to-action buttons -->
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View Projects</a>
+            <a class="btn btn-ghost" href="mailto:sebastianlevi2007@gmail.com">Email Me</a>
+            <a class="btn btn-ghost" href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+          </div>
+
+          <!-- Quick credibility stats -->
+          <div class="stats">
+            <div class="stat-card">
+              <strong>5+</strong>
+              <span>technical projects</span>
+            </div>
+            <div class="stat-card">
+              <strong>CS</strong>
+              <span>student path</span>
+            </div>
+            <div class="stat-card">
+              <strong>SQL</strong>
+              <span>currently learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right-side profile card with a code-style summary -->
+        <aside class="profile-card reveal" aria-label="Developer profile card">
+          <div class="section-label">Currently focused on</div>
+          <h2>Practical software for real business problems.</h2>
+
+          <!-- Decorative terminal block to make the page feel more technical and interactive -->
+          <div class="terminal">
+            <div class="terminal-top">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <pre><code>const sebastian = {
+  role: "Bookkeeper + Software Specialist",
+  building: ["portfolio", "web apps", "data workflows"],
+  learning: ["SQL", "data pipelines", "backend logic"],
+  strengths: ["debugging", "detail", "business context"]
+};</code></pre>
+          </div>
+
+          <!-- Skill badges inside the profile card -->
+          <div class="profile-badges">
+            <span class="badge">JavaScript</span>
+            <span class="badge">Python</span>
+            <span class="badge">SQL Learning</span>
+            <span class="badge">Firebase</span>
+            <span class="badge">Sanity CMS</span>
+            <span class="badge">Git/GitHub</span>
+            <span class="badge">Excel Systems</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Project section with filter buttons powered by JavaScript -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">Selected Work</div>
+            <h2>Projects that show how I think.</h2>
+          </div>
+          <p>Use the filters to quickly view my web, data, automation, and business-system projects.</p>
+        </div>
+
+        <!-- data-filter tells JavaScript which project cards to show -->
+        <div class="filters reveal" aria-label="Project filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="data">Data</button>
+          <button class="filter-btn" data-filter="business">Business Systems</button>
+          <button class="filter-btn" data-filter="learning">Learning</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- data-category can hold multiple categories separated by spaces -->
+          <article class="project-card reveal" data-category="web">
+            <div class="project-icon">💬</div>
+            <h3>Real-Time Chat App</h3>
+            <p>Built a live chat feature using Firebase for real-time database updates, authentication-ready structure, and Git-based publishing.</p>
+            <div class="tag-row">
+              <span class="tag">Firebase</span><span class="tag">JavaScript</span><span class="tag">Git</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo</a>
+              <a href="#">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web">
+            <div class="project-icon">🖼️</div>
+            <h3>Photo Gallery Website</h3>
+            <p>Created a gallery where users can upload, display, delete, tag, and search photos by keyword or tag.</p>
+            <div class="tag-row">
+              <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Search UI</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo</a>
+              <a href="#">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="business web">
+            <div class="project-icon">📄</div>
+            <h3>Awesome Accounting Website</h3>
+            <p>Worked on a client-facing accounting website with articles, document pages, CMS content, and polished business sections.</p>
+            <div class="tag-row">
+              <span class="tag">Sanity CMS</span><span class="tag">JavaScript</span><span class="tag">Content Systems</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Live Demo</a>
+              <a href="#">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="data business">
+            <div class="project-icon">📊</div>
+            <h3>Sales & Payout Reconciliation Workbook</h3>
+            <p>Organized Lightspeed, Shopify, banking, refunds, fees, and timing differences into clearer reconciliation workflows.</p>
+            <div class="tag-row">
+              <span class="tag">Excel</span><span class="tag">Accounting</span><span class="tag">Data Cleaning</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Case Study</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="data learning">
+            <div class="project-icon">🐍</div>
+            <h3>Python Practice Projects</h3>
+            <p>Developing Python skills for automation, data handling, problem solving, and future data engineering work.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Automation</span><span class="tag">Problem Solving</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="learning">
+            <div class="project-icon">🧠</div>
+            <h3>MASM Assembly Projects</h3>
+            <p>Completed low-level programming work involving logic flow, input validation, debugging, and computer architecture concepts.</p>
+            <div class="tag-row">
+              <span class="tag">Assembly</span><span class="tag">Debugging</span><span class="tag">Architecture</span>
+            </div>
+            <div class="project-links">
+              <a href="#">Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills section with visual progress bars -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">Skills</div>
+            <h2>Technical range with business context.</h2>
+          </div>
+          <p>I combine software learning with real accounting and workflow experience, which helps me build tools that are practical, organized, and usable.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript, responsive layouts, interactive UI, clean page structure.</p>
+            <div class="bar"><span style="--width: 82%"></span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Backend/Data</h3>
+            <p>Firebase, Python, SQL fundamentals, data organization, and database concepts.</p>
+            <div class="bar"><span style="--width: 68%"></span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Business Systems</h3>
+            <p>Accounting workflows, Excel formulas, reconciliation, Zoho, Avalara, and process improvement.</p>
+            <div class="bar"><span style="--width: 88%"></span></div>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Developer Tools</h3>
+            <p>Git/GitHub, debugging, AI-assisted development, documentation, and iterative problem solving.</p>
+            <div class="bar"><span style="--width: 76%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline-style experience section -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-label">Experience</div>
+            <h2>Where software meets real workflows.</h2>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-date">Current</div>
+            <div>
+              <h3>Bookkeeper / Software Specialist</h3>
+              <p>Manage digital financial systems, help improve software workflows, troubleshoot business processes, organize financial data, and support accounting operations with strong attention to detail.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-date">Projects</div>
+            <div>
+              <h3>Web Development + CMS</h3>
+              <p>Built and improved websites using JavaScript, Firebase, Sanity CMS, Git, and custom UI sections for client-facing content.</p>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-date">Learning</div>
+            <div>
+              <h3>Computer Science + Data Path</h3>
+              <p>Studying computer science concepts while strengthening Python, SQL, databases, cloud fundamentals, and software engineering practices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final contact section with email and profile links -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact-card reveal">
+          <div class="section-label">Contact</div>
+          <h2>Let’s build something useful.</h2>
+          <p>I’m interested in software engineering, data, automation, and business systems roles where I can combine technical work with practical problem solving.</p>
+          <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
+            <a class="btn btn-primary" href="mailto:sebastianlevi2007@gmail.com">sebastianlevi2007@gmail.com</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Sebastian Lopez. Built with HTML, CSS, and JavaScript.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Grabs the mobile menu button and the nav link container from the page.
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    // Opens or closes the mobile menu by toggling the .open class.
+    mobileToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Closes the mobile menu after a user clicks a nav link.
+    // This prevents the dropdown from staying open after jumping to a section.
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Collects all project filter buttons and all project cards.
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    // Adds click behavior to each filter button.
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        // Removes active styling from every button, then applies it to the clicked button.
+        filterButtons.forEach((btn) => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Reads the selected filter from data-filter, such as "web" or "data".
+        const filter = button.dataset.filter;
+
+        projectCards.forEach((card) => {
+          // Each project card can have one or more categories in data-category.
+          const categories = card.dataset.category.split(' ');
+
+          // Show all cards for "all", or only cards whose category matches the selected filter.
+          const shouldShow = filter === 'all' || categories.includes(filter);
+          card.style.display = shouldShow ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Selects all elements that should animate into view while scrolling.
+    const revealElements = document.querySelectorAll('.reveal');
+
+    /*
+      IntersectionObserver watches elements as they enter the viewport.
+      When an element becomes visible, we add the .visible class to trigger the CSS animation.
+      observer.unobserve keeps the animation from repeatedly running every time you scroll.
+    */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    // Starts observing every reveal element on the page.
+    revealElements.forEach((element) => observer.observe(element));
+
+    // Automatically updates the footer year so it stays current.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
