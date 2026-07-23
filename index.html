@@ -1,363 +1,572 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="dark">
 <head>
-  <!-- Basic page setup for browser compatibility and responsive sizing -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sebastian Lopez | Portfolio</title>
-  <meta name="description" content="Sebastian Lopez portfolio website showcasing software, data, accounting systems, and web development projects." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070b16" />
+  <meta name="description" content="Sebastian Lopez is a Cloud Consultant, Cloud and Network Engineering student, web developer, and business systems builder specializing in Azure, DevOps, automation, WordPress, and responsive websites." />
+  <meta name="keywords" content="Sebastian Lopez, Azure consultant, cloud engineer, network engineer, web developer, WordPress developer, DevOps, Bicep, infrastructure as code" />
+  <meta name="author" content="Sebastian Lopez" />
+
+  <meta property="og:title" content="Sebastian Lopez | Cloud, DevOps & Web Development" />
+  <meta property="og:description" content="Cloud infrastructure, automation, and professional websites built for real business needs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saberslayerk.github.io/" />
+
+  <title>Sebastian Lopez | Cloud, DevOps & Web Development</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="index.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sebastian Lopez",
+    "url": "https://saberslayerk.github.io/",
+    "email": "mailto:sebastianlevi2007@gmail.com",
+    "jobTitle": "Cloud Consultant and Web Developer",
+    "sameAs": [
+      "https://github.com/SaberSLayerk",
+      "https://www.linkedin.com/in/sebastian-lopez-56096528a/"
+    ],
+    "knowsAbout": [
+      "Microsoft Azure",
+      "Azure DevOps",
+      "Infrastructure as Code",
+      "Bicep",
+      "Cloud Networking",
+      "WordPress",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Python",
+      "Business Automation"
+    ]
+  }
+  </script>
 </head>
 <body>
-  <!-- Main navigation bar. Each link jumps to a section on this same page. -->
-  <nav class="nav">
-    <div class="container nav-inner">
-      <a class="logo" href="#top" aria-label="Sebastian Lopez home">
-        <span class="logo-mark">SL</span>
-        <span>Sebastian Lopez</span>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <svg class="icon-sprite" aria-hidden="true">
+    <symbol id="icon-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    <symbol id="icon-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9" /><path d="M20 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h6" /></symbol>
+    <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" /><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3" /></symbol>
+    <symbol id="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" /></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M21 12.8A8.6 8.6 0 1 1 11.2 3 6.7 6.7 0 0 0 21 12.8Z" /></symbol>
+    <symbol id="icon-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" /></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></symbol>
+    <symbol id="icon-cloud" viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .7-7.94A6 6 0 0 0 6.3 8.5 4.7 4.7 0 0 0 7 18Z" /><path d="M9 14h6M12 11v6" /></symbol>
+    <symbol id="icon-code" viewBox="0 0 24 24"><path d="m8 9-3 3 3 3M16 9l3 3-3 3M14 5l-4 14" /></symbol>
+    <symbol id="icon-automation" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21H9.6v-.1A1.7 1.7 0 0 0 8.5 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3V9.6h.1A1.7 1.7 0 0 0 4.6 8.5a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.1A1.7 1.7 0 0 0 15.5 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.16.38.37.72.6 1 .3.3.7.45 1.1.4h.1v4h-.1A1.7 1.7 0 0 0 19.4 15Z" /></symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+    <symbol id="icon-location" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" /><circle cx="12" cy="10" r="2.5" /></symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></symbol>
+    <symbol id="icon-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7.4A5.8 5.8 0 0 0 19.3 3 5.4 5.4 0 0 0 19.1 0S17.9-.4 15 1.5a13.4 13.4 0 0 0-6 0C6.1-.4 4.9 0 4.9 0A5.4 5.4 0 0 0 4.7 3a5.8 5.8 0 0 0-1.5 4.1c0 5.8 3.5 7 6.8 7.4A4.8 4.8 0 0 0 9 18v4" /><path d="M9 19c-3 .9-3-1.5-4-2" /></symbol>
+    <symbol id="icon-linkedin" viewBox="0 0 24 24"><rect x="3" y="9" width="4" height="12" /><path d="M5 3.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM11 21V9h4v2c1-2 6-3 6 3v7h-4v-6c0-2-2-2-2 0v6Z" /></symbol>
+    <symbol id="icon-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2" /></symbol>
+  </svg>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Sebastian Lopez home">
+        <span class="brand-mark">SL</span>
+        <span class="brand-copy"><strong>Sebastian Lopez</strong><small>Cloud + Web</small></span>
       </a>
 
-      <!-- This button appears on mobile and opens/closes the navigation links -->
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Open navigation">Menu</button>
+      <button class="nav-toggle icon-button" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">
+        <svg><use href="#icon-menu"></use></svg>
+      </button>
 
       <div class="nav-links" id="navLinks">
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#expertise">Expertise</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
-    </div>
-  </nav>
 
-  <main id="top">
-    <!-- Hero section: first thing recruiters see when the site loads -->
-    <section class="hero">
+      <div class="nav-actions">
+        <button class="theme-toggle icon-button" id="themeToggle" type="button" aria-label="Switch color theme">
+          <svg class="theme-icon theme-icon-sun"><use href="#icon-sun"></use></svg>
+          <svg class="theme-icon theme-icon-moon"><use href="#icon-moon"></use></svg>
+        </button>
+        <a class="nav-cta" href="#contact">Let's work together</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="top">
+      <canvas class="network-canvas" id="networkCanvas" aria-hidden="true"></canvas>
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+
       <div class="container hero-grid">
-        <div class="reveal">
-          <div class="eyebrow">Software • Data • Accounting Systems</div>
-          <h1>Building clean tools that turn messy workflows into <span class="gradient-text">simple systems.</span></h1>
-          <p>
-            I’m Sebastian Lopez, a computer science student and bookkeeper/software specialist focused on web development,
-            automation, data, and business systems. I work with JavaScript, HTML/CSS, Firebase, Sanity CMS, Python, Excel,
-            and I’m currently building my SQL skills.
+        <div class="hero-copy reveal">
+          <div class="availability-pill">
+            <span class="status-dot"></span>
+            Available for freelance projects and cloud opportunities
+          </div>
+
+          <p class="hero-kicker">Cloud infrastructure. Automation. Digital experiences.</p>
+          <h1>I build systems that move businesses <span class="gradient-text">forward.</span></h1>
+          <p class="hero-summary">
+            I’m Sebastian, a Cloud Consultant and WGU Cloud and Network Engineering student. I design Azure infrastructure, automate deployments, and build professional websites with custom code and WordPress.
           </p>
 
-          <!-- Primary call-to-action buttons -->
+          <div class="role-line" aria-live="polite">
+            <span>I work as a</span>
+            <strong id="rotatingRole">Cloud Consultant</strong>
+          </div>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">View Projects</a>
-            <a class="btn btn-ghost" href="mailto:sebastianlevi2007@gmail.com">Email Me</a>
-            <a class="btn btn-ghost" href="https://github.com/your-github-username" target="_blank" rel="noopener">GitHub</a>
+            <a class="button button-primary magnetic" href="#work">
+              Explore my work
+              <svg><use href="#icon-arrow"></use></svg>
+            </a>
+            <a class="button button-secondary" href="#contact">Start a project</a>
+            <a class="text-link" href="https://www.linkedin.com/in/sebastian-lopez-56096528a/" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+              <svg><use href="#icon-external"></use></svg>
+            </a>
           </div>
 
-          <!-- Quick credibility stats -->
-          <div class="stats">
-            <div class="stat-card">
-              <strong>5+</strong>
-              <span>technical projects</span>
+          <div class="hero-proof" aria-label="Professional highlights">
+            <div>
+              <strong data-count="4">0</strong><span>+</span>
+              <small>Azure environments supported</small>
             </div>
-            <div class="stat-card">
-              <strong>CS</strong>
-              <span>student path</span>
+            <div>
+              <strong data-count="3">0</strong><span></span>
+              <small>Specialties: cloud, web, automation</small>
             </div>
-            <div class="stat-card">
-              <strong>SQL</strong>
-              <span>currently learning</span>
+            <div>
+              <strong data-count="100">0</strong><span>%</span>
+              <small>Responsive-first web design</small>
             </div>
           </div>
         </div>
 
-        <!-- Right-side profile card with a code-style summary -->
-        <aside class="profile-card reveal" aria-label="Developer profile card">
-          <div class="section-label">Currently focused on</div>
-          <h2>Practical software for real business problems.</h2>
-
-          <!-- Decorative terminal block to make the page feel more technical and interactive -->
-          <div class="terminal">
-            <div class="terminal-top">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
+        <div class="hero-visual reveal" aria-label="Cloud deployment dashboard illustration">
+          <div class="visual-glow" aria-hidden="true"></div>
+          <div class="dashboard-card tilt-card">
+            <div class="dashboard-top">
+              <div>
+                <span class="dashboard-label">Infrastructure workspace</span>
+                <strong>Production readiness</strong>
+              </div>
+              <span class="live-badge"><i></i> Live</span>
             </div>
-            <pre><code>const sebastian = {
-  role: "Bookkeeper + Software Specialist",
-  building: ["portfolio", "web apps", "data workflows"],
-  learning: ["SQL", "data pipelines", "backend logic"],
-  strengths: ["debugging", "detail", "business context"]
-};</code></pre>
+
+            <div class="deployment-flow">
+              <div class="flow-node">
+                <span class="flow-icon"><svg><use href="#icon-code"></use></svg></span>
+                <div><small>Source</small><strong>Bicep IaC</strong></div>
+                <span class="node-status">Ready</span>
+              </div>
+              <div class="flow-connector"><span></span></div>
+              <div class="flow-node">
+                <span class="flow-icon"><svg><use href="#icon-automation"></use></svg></span>
+                <div><small>Pipeline</small><strong>Azure DevOps</strong></div>
+                <span class="node-status">Passed</span>
+              </div>
+              <div class="flow-connector"><span></span></div>
+              <div class="flow-node">
+                <span class="flow-icon"><svg><use href="#icon-cloud"></use></svg></span>
+                <div><small>Target</small><strong>Azure Cloud</strong></div>
+                <span class="node-status">Healthy</span>
+              </div>
+            </div>
+
+            <div class="terminal-window">
+              <div class="terminal-bar">
+                <div class="terminal-dots"><i></i><i></i><i></i></div>
+                <span>deployment-status.sh</span>
+              </div>
+              <div class="terminal-body" aria-label="Animated deployment output">
+                <p><span>$</span> az deployment sub create</p>
+                <p class="terminal-muted">Validating infrastructure modules...</p>
+                <p class="terminal-success"><span>✓</span> Network and security configured</p>
+                <p class="terminal-success"><span>✓</span> Application services deployed</p>
+                <p class="terminal-success"><span>✓</span> Managed identity access verified</p>
+                <p class="terminal-cursor">_<span></span></p>
+              </div>
+            </div>
+
+            <div class="dashboard-metrics">
+              <div><small>Environment</small><strong>Multi-stage</strong></div>
+              <div><small>Delivery</small><strong>Automated</strong></div>
+              <div><small>Approach</small><strong>Secure by design</strong></div>
+            </div>
           </div>
 
-          <!-- Skill badges inside the profile card -->
-          <div class="profile-badges">
-            <span class="badge">JavaScript</span>
-            <span class="badge">Python</span>
-            <span class="badge">SQL Learning</span>
-            <span class="badge">Firebase</span>
-            <span class="badge">Sanity CMS</span>
-            <span class="badge">Git/GitHub</span>
-            <span class="badge">Excel Systems</span>
+          <div class="floating-chip chip-one"><span>AZ</span> Microsoft Azure</div>
+          <div class="floating-chip chip-two"><span>WP</span> WordPress</div>
+          <div class="floating-chip chip-three"><span>&lt;/&gt;</span> Web Development</div>
+        </div>
+      </div>
+
+      <div class="container tech-marquee-wrap reveal" aria-label="Technologies and capabilities">
+        <div class="tech-marquee">
+          <div class="tech-track">
+            <span>Microsoft Azure</span><i></i><span>Azure DevOps</span><i></i><span>Bicep</span><i></i><span>Networking</span><i></i><span>WordPress</span><i></i><span>JavaScript</span><i></i><span>Python</span><i></i><span>Automation</span><i></i>
+            <span>Microsoft Azure</span><i></i><span>Azure DevOps</span><i></i><span>Bicep</span><i></i><span>Networking</span><i></i><span>WordPress</span><i></i><span>JavaScript</span><i></i><span>Python</span><i></i><span>Automation</span><i></i>
           </div>
-        </aside>
+        </div>
       </div>
     </section>
 
-    <!-- Project section with filter buttons powered by JavaScript -->
-    <section id="projects">
+    <section class="section work-section" id="work">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-heading reveal">
           <div>
-            <div class="section-label">Selected Work</div>
-            <h2>Projects that show how I think.</h2>
+            <span class="section-eyebrow">Selected work</span>
+            <h2>Projects built around <span>real problems.</span></h2>
           </div>
-          <p>Use the filters to quickly view my web, data, automation, and business-system projects.</p>
+          <p>From enterprise Azure environments to client websites and accounting automation, each project combines technical execution with business context.</p>
         </div>
 
-        <!-- data-filter tells JavaScript which project cards to show -->
-        <div class="filters reveal" aria-label="Project filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="data">Data</button>
-          <button class="filter-btn" data-filter="business">Business Systems</button>
-          <button class="filter-btn" data-filter="learning">Learning</button>
+        <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+          <button class="filter-button active" type="button" data-filter="all">All work</button>
+          <button class="filter-button" type="button" data-filter="cloud">Cloud</button>
+          <button class="filter-button" type="button" data-filter="web">Web</button>
+          <button class="filter-button" type="button" data-filter="automation">Automation</button>
+          <button class="filter-button" type="button" data-filter="business">Business systems</button>
         </div>
 
-        <div class="projects-grid">
-          <!-- data-category can hold multiple categories separated by spaces -->
-          <article class="project-card reveal" data-category="web">
-            <div class="project-icon">💬</div>
-            <h3>Real-Time Chat App</h3>
-            <p>Built a live chat feature using Firebase for real-time database updates, authentication-ready structure, and Git-based publishing.</p>
-            <div class="tag-row">
-              <span class="tag">Firebase</span><span class="tag">JavaScript</span><span class="tag">Git</span>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card project-featured reveal tilt-card" data-category="cloud automation" data-project="azure-platform">
+            <div class="project-visual cloud-visual">
+              <div class="visual-grid"></div>
+              <div class="architecture-map">
+                <span class="arch-node arch-main">Azure</span>
+                <span class="arch-node arch-one">App Service</span>
+                <span class="arch-node arch-two">Key Vault</span>
+                <span class="arch-node arch-three">SQL MI</span>
+                <span class="arch-node arch-four">Container Apps</span>
+                <svg viewBox="0 0 500 260" preserveAspectRatio="none" aria-hidden="true">
+                  <path d="M250 130 C180 80 150 70 90 62" />
+                  <path d="M250 130 C320 80 350 70 410 62" />
+                  <path d="M250 130 C180 180 150 190 90 202" />
+                  <path d="M250 130 C320 180 350 190 410 202" />
+                </svg>
+              </div>
             </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">Code</a>
+            <div class="project-content">
+              <div class="project-meta"><span>Cloud infrastructure</span><span>Private client work</span></div>
+              <h3>Multi-Environment Azure Infrastructure Platform</h3>
+              <p>Designed repeatable Azure infrastructure across development, demo, production, and client environments using Bicep and Azure DevOps pipelines.</p>
+              <div class="tag-list"><span>Azure</span><span>Bicep</span><span>DevOps</span><span>Networking</span><span>RBAC</span></div>
+              <button class="project-open" type="button">View case study <svg><use href="#icon-arrow"></use></svg></button>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="web">
-            <div class="project-icon">🖼️</div>
-            <h3>Photo Gallery Website</h3>
-            <p>Created a gallery where users can upload, display, delete, tag, and search photos by keyword or tag.</p>
-            <div class="tag-row">
-              <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Search UI</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">Code</a>
-            </div>
+          <article class="project-card reveal tilt-card" data-category="cloud automation web" data-project="static-web-apps">
+            <div class="project-number">02</div>
+            <div class="project-icon-box"><svg><use href="#icon-cloud"></use></svg></div>
+            <div class="project-meta"><span>Cloud delivery</span><span>CI/CD</span></div>
+            <h3>Multi-Target Static Web App Deployment</h3>
+            <p>Built a pipeline that compiles a frontend once and deploys it consistently to multiple Azure Static Web Apps across environments.</p>
+            <div class="tag-list"><span>Azure SWA</span><span>YAML</span><span>Node.js</span></div>
+            <button class="project-open" type="button">View details <svg><use href="#icon-arrow"></use></svg></button>
           </article>
 
-          <article class="project-card reveal" data-category="business web">
-            <div class="project-icon">📄</div>
+          <article class="project-card reveal tilt-card" data-category="web business" data-project="accounting-site">
+            <div class="project-number">03</div>
+            <div class="project-icon-box"><svg><use href="#icon-code"></use></svg></div>
+            <div class="project-meta"><span>Client website</span><span>Business</span></div>
             <h3>Awesome Accounting Website</h3>
-            <p>Worked on a client-facing accounting website with articles, document pages, CMS content, and polished business sections.</p>
-            <div class="tag-row">
-              <span class="tag">Sanity CMS</span><span class="tag">JavaScript</span><span class="tag">Content Systems</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Live Demo</a>
-              <a href="#">Code</a>
+            <p>Designed, built, and maintained a responsive company website with branded pages, mobile navigation, forms, and production email delivery.</p>
+            <div class="tag-list"><span>HTML/CSS</span><span>JavaScript</span><span>PHP</span><span>CMS</span></div>
+            <div class="project-card-actions">
+              <a class="project-link" href="https://www.awesomeaccountinginc.com" target="_blank" rel="noopener noreferrer">Visit site <svg><use href="#icon-external"></use></svg></a>
+              <button class="project-open" type="button">Details <svg><use href="#icon-arrow"></use></svg></button>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="data business">
-            <div class="project-icon">📊</div>
-            <h3>Sales & Payout Reconciliation Workbook</h3>
-            <p>Organized Lightspeed, Shopify, banking, refunds, fees, and timing differences into clearer reconciliation workflows.</p>
-            <div class="tag-row">
-              <span class="tag">Excel</span><span class="tag">Accounting</span><span class="tag">Data Cleaning</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Case Study</a>
-            </div>
+          <article class="project-card reveal tilt-card" data-category="automation business web" data-project="accounting-assistant">
+            <div class="project-number">04</div>
+            <div class="project-icon-box"><svg><use href="#icon-automation"></use></svg></div>
+            <div class="project-meta"><span>AI automation</span><span>Full stack</span></div>
+            <h3>AI Accounting Assistant</h3>
+            <p>Developed a local application for CSV uploads, transaction review, categorization, editing, deletion, and persistent storage.</p>
+            <div class="tag-list"><span>FastAPI</span><span>React</span><span>TypeScript</span><span>Vite</span></div>
+            <button class="project-open" type="button">View details <svg><use href="#icon-arrow"></use></svg></button>
           </article>
 
-          <article class="project-card reveal" data-category="data learning">
-            <div class="project-icon">🐍</div>
-            <h3>Python Practice Projects</h3>
-            <p>Developing Python skills for automation, data handling, problem solving, and future data engineering work.</p>
-            <div class="tag-row">
-              <span class="tag">Python</span><span class="tag">Automation</span><span class="tag">Problem Solving</span>
-            </div>
-            <div class="project-links">
-              <a href="#">Code</a>
-            </div>
+          <article class="project-card reveal tilt-card" data-category="automation business" data-project="receipt-categorizer">
+            <div class="project-number">05</div>
+            <div class="project-icon-box"><svg><use href="#icon-automation"></use></svg></div>
+            <div class="project-meta"><span>Document automation</span><span>Python</span></div>
+            <h3>AI Receipt Categorizer</h3>
+            <p>Created an AI-first workflow that extracts receipt details from images and PDFs, assigns categories, and exports structured CSV data.</p>
+            <div class="tag-list"><span>Python</span><span>OpenAI</span><span>PyMuPDF</span><span>CSV</span></div>
+            <button class="project-open" type="button">View details <svg><use href="#icon-arrow"></use></svg></button>
           </article>
 
-          <article class="project-card reveal" data-category="learning">
-            <div class="project-icon">🧠</div>
-            <h3>MASM Assembly Projects</h3>
-            <p>Completed low-level programming work involving logic flow, input validation, debugging, and computer architecture concepts.</p>
-            <div class="tag-row">
-              <span class="tag">Assembly</span><span class="tag">Debugging</span><span class="tag">Architecture</span>
+          <article class="project-card reveal tilt-card" data-category="business automation" data-project="reconciliation">
+            <div class="project-number">06</div>
+            <div class="project-icon-box"><svg><use href="#icon-briefcase"></use></svg></div>
+            <div class="project-meta"><span>Financial systems</span><span>Operations</span></div>
+            <h3>Sales and Payout Reconciliation Systems</h3>
+            <p>Organized sales, banking, refunds, processing fees, and timing differences into clearer, repeatable reconciliation workflows.</p>
+            <div class="tag-list"><span>Excel</span><span>Accounting</span><span>Data cleanup</span></div>
+            <button class="project-open" type="button">View details <svg><use href="#icon-arrow"></use></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <span class="section-eyebrow">How I can help</span>
+          <h2>One technical partner. <span>Three ways to create value.</span></h2>
+          <p>My background crosses infrastructure, websites, and business operations, so I can solve the technical problem without losing sight of the business goal.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-index">01</div>
+            <div class="service-icon"><svg><use href="#icon-cloud"></use></svg></div>
+            <h3>Cloud and DevOps</h3>
+            <p>Secure, repeatable Azure environments built with automation and maintainability in mind.</p>
+            <ul>
+              <li><svg><use href="#icon-check"></use></svg>Azure infrastructure design</li>
+              <li><svg><use href="#icon-check"></use></svg>Bicep and Infrastructure as Code</li>
+              <li><svg><use href="#icon-check"></use></svg>Azure DevOps CI/CD pipelines</li>
+              <li><svg><use href="#icon-check"></use></svg>Networking, RBAC, and troubleshooting</li>
+            </ul>
+          </article>
+
+          <article class="service-card service-card-highlight reveal">
+            <div class="popular-label">Freelance ready</div>
+            <div class="service-index">02</div>
+            <div class="service-icon"><svg><use href="#icon-code"></use></svg></div>
+            <h3>Websites and WordPress</h3>
+            <p>Professional, responsive websites designed to make businesses look credible and convert visitors into customers.</p>
+            <ul>
+              <li><svg><use href="#icon-check"></use></svg>Business and portfolio websites</li>
+              <li><svg><use href="#icon-check"></use></svg>WordPress design and customization</li>
+              <li><svg><use href="#icon-check"></use></svg>WooCommerce and payment setup</li>
+              <li><svg><use href="#icon-check"></use></svg>HTML, CSS, JavaScript, and PHP</li>
+            </ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-index">03</div>
+            <div class="service-icon"><svg><use href="#icon-automation"></use></svg></div>
+            <h3>Automation and Business Systems</h3>
+            <p>Practical tools that reduce repetitive work, organize data, and improve everyday workflows.</p>
+            <ul>
+              <li><svg><use href="#icon-check"></use></svg>Python and AI-assisted automation</li>
+              <li><svg><use href="#icon-check"></use></svg>Accounting workflow improvements</li>
+              <li><svg><use href="#icon-check"></use></svg>Data cleanup and reconciliation</li>
+              <li><svg><use href="#icon-check"></use></svg>Technical documentation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section expertise-section" id="expertise">
+      <div class="container expertise-grid">
+        <div class="expertise-intro reveal">
+          <span class="section-eyebrow">Technical toolkit</span>
+          <h2>Broad enough to connect the pieces. <span>Focused enough to ship.</span></h2>
+          <p>I work across cloud infrastructure, networking, development, automation, and business systems. Instead of decorative skill percentages, this section shows where I’ve applied each technology.</p>
+          <div class="expertise-callout">
+            <span>Currently studying</span>
+            <strong>B.S. Cloud and Network Engineering at WGU</strong>
+          </div>
+        </div>
+
+        <div class="expertise-panels reveal">
+          <article class="expertise-panel active">
+            <button type="button" class="expertise-toggle" aria-expanded="true">
+              <span><b>01</b> Cloud infrastructure and networking</span><i></i>
+            </button>
+            <div class="expertise-content">
+              <p>Used to deploy and troubleshoot multi-environment Azure platforms.</p>
+              <div class="skill-cloud"><span>Microsoft Azure</span><span>Virtual Networks</span><span>App Service</span><span>Key Vault</span><span>App Configuration</span><span>Container Apps</span><span>SQL Managed Instance</span><span>RBAC</span></div>
             </div>
-            <div class="project-links">
-              <a href="#">Code</a>
+          </article>
+          <article class="expertise-panel">
+            <button type="button" class="expertise-toggle" aria-expanded="false">
+              <span><b>02</b> DevOps and automation</span><i></i>
+            </button>
+            <div class="expertise-content">
+              <p>Used to standardize deployments, validate changes, and reduce manual work.</p>
+              <div class="skill-cloud"><span>Azure DevOps</span><span>YAML</span><span>Bicep</span><span>Git</span><span>GitHub</span><span>Python</span><span>CI/CD</span><span>Infrastructure as Code</span></div>
+            </div>
+          </article>
+          <article class="expertise-panel">
+            <button type="button" class="expertise-toggle" aria-expanded="false">
+              <span><b>03</b> Web development</span><i></i>
+            </button>
+            <div class="expertise-content">
+              <p>Used to build responsive business websites, interactive interfaces, and CMS-driven content.</p>
+              <div class="skill-cloud"><span>WordPress</span><span>WooCommerce</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>PHP</span><span>React</span><span>TypeScript</span><span>Responsive Design</span></div>
+            </div>
+          </article>
+          <article class="expertise-panel">
+            <button type="button" class="expertise-toggle" aria-expanded="false">
+              <span><b>04</b> Business and data systems</span><i></i>
+            </button>
+            <div class="expertise-content">
+              <p>Used to organize financial operations and build tools around real workflows.</p>
+              <div class="skill-cloud"><span>Excel</span><span>Accounting Operations</span><span>Reconciliation</span><span>CSV Processing</span><span>Financial Reporting</span><span>Process Improvement</span><span>AI Tools</span></div>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Skills section with visual progress bars -->
-    <section id="skills">
+    <section class="section experience-section" id="experience">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="section-heading reveal">
           <div>
-            <div class="section-label">Skills</div>
-            <h2>Technical range with business context.</h2>
+            <span class="section-eyebrow">Experience</span>
+            <h2>Technical work with <span>business impact.</span></h2>
           </div>
-          <p>I combine software learning with real accounting and workflow experience, which helps me build tools that are practical, organized, and usable.</p>
+          <p>I’ve worked in environments where infrastructure, customer-facing technology, and financial operations all need to function reliably.</p>
         </div>
 
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <h3>Frontend</h3>
-            <p>HTML, CSS, JavaScript, responsive layouts, interactive UI, clean page structure.</p>
-            <div class="bar"><span style="--width: 82%"></span></div>
+        <div class="experience-list">
+          <article class="experience-item reveal">
+            <div class="experience-time"><span>Current</span><small>Cloud consulting</small></div>
+            <div class="experience-main">
+              <div class="experience-title">
+                <div><h3>Cloud Infrastructure Consultant</h3><p>Brighter Solutions</p></div>
+                <span>Azure · DevOps · IaC</span>
+              </div>
+              <p>Support the design, deployment, and modernization of enterprise Azure environments. Build Bicep modules and Azure DevOps pipelines, standardize naming and resource structures, configure networking and access, and troubleshoot complex cloud deployments.</p>
+            </div>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-time"><span>Current</span><small>Accounting + technology</small></div>
+            <div class="experience-main">
+              <div class="experience-title">
+                <div><h3>Accounting Operations and Web Developer</h3><p>Awesome Accounting Inc.</p></div>
+                <span>Web · Payroll · Systems</span>
+              </div>
+              <p>Support bookkeeping, payroll, financial reporting, reconciliations, and process improvement. Designed and built the company website, maintained forms and hosting integrations, and applied automation and technology to improve internal and client-facing workflows.</p>
+            </div>
+          </article>
+
+          <article class="experience-item reveal">
+            <div class="experience-time"><span>In progress</span><small>Education</small></div>
+            <div class="experience-main">
+              <div class="experience-title">
+                <div><h3>B.S. Cloud and Network Engineering</h3><p>Western Governors University</p></div>
+                <span>Cloud · Networks · Security</span>
+              </div>
+              <p>Developing hands-on skills in cloud infrastructure, networking, security, automation, virtualization, and modern IT operations through WGU’s competency-based program.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-card reveal tilt-card">
+          <div class="about-monogram">SL</div>
+          <div class="about-status"><i></i> Based in Colorado Springs, Colorado</div>
+          <div class="about-socials">
+            <a href="https://github.com/SaberSLayerk" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#icon-github"></use></svg></a>
+            <a href="https://www.linkedin.com/in/sebastian-lopez-56096528a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+            <a href="mailto:sebastianlevi2007@gmail.com" aria-label="Email"><svg><use href="#icon-mail"></use></svg></a>
           </div>
-          <div class="skill-card reveal">
-            <h3>Backend/Data</h3>
-            <p>Firebase, Python, SQL fundamentals, data organization, and database concepts.</p>
-            <div class="bar"><span style="--width: 68%"></span></div>
-          </div>
-          <div class="skill-card reveal">
-            <h3>Business Systems</h3>
-            <p>Accounting workflows, Excel formulas, reconciliation, Zoho, Avalara, and process improvement.</p>
-            <div class="bar"><span style="--width: 88%"></span></div>
-          </div>
-          <div class="skill-card reveal">
-            <h3>Developer Tools</h3>
-            <p>Git/GitHub, debugging, AI-assisted development, documentation, and iterative problem solving.</p>
-            <div class="bar"><span style="--width: 76%"></span></div>
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="section-eyebrow">About me</span>
+          <h2>I like turning complicated work into <span>clear systems.</span></h2>
+          <p>My career sits at the intersection of cloud engineering, web development, and business operations. That mix helps me understand not only how to build something, but why it needs to exist and how people will actually use it.</p>
+          <p>I’m especially interested in roles and projects involving Azure infrastructure, automation, network engineering, responsive websites, WordPress, and technology that improves everyday business processes.</p>
+          <div class="principles-grid">
+            <div><strong>01</strong><span>Clear communication</span></div>
+            <div><strong>02</strong><span>Documented work</span></div>
+            <div><strong>03</strong><span>Practical solutions</span></div>
+            <div><strong>04</strong><span>Continuous learning</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Timeline-style experience section -->
-    <section id="experience">
+    <section class="section contact-section" id="contact">
       <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <div class="section-label">Experience</div>
-            <h2>Where software meets real workflows.</h2>
+        <div class="contact-shell reveal">
+          <div class="contact-copy">
+            <span class="section-eyebrow">Let’s build something useful</span>
+            <h2>Have a role, website, or technical project in mind?</h2>
+            <p>I’m open to cloud and network opportunities, freelance web projects, WordPress work, and consulting engagements.</p>
+            <div class="contact-options">
+              <a href="mailto:sebastianlevi2007@gmail.com"><svg><use href="#icon-mail"></use></svg><span><small>Email</small><strong>sebastianlevi2007@gmail.com</strong></span></a>
+              <a href="https://www.linkedin.com/in/sebastian-lopez-56096528a/" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg><span><small>LinkedIn</small><strong>Connect professionally</strong></span></a>
+              <a href="https://github.com/SaberSLayerk" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg><span><small>GitHub</small><strong>View repositories</strong></span></a>
+            </div>
           </div>
-        </div>
 
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <div class="timeline-date">Current</div>
-            <div>
-              <h3>Bookkeeper / Software Specialist</h3>
-              <p>Manage digital financial systems, help improve software workflows, troubleshoot business processes, organize financial data, and support accounting operations with strong attention to detail.</p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <label>Name<input type="text" name="name" autocomplete="name" required placeholder="Your name" /></label>
+              <label>Email<input type="email" name="email" autocomplete="email" required placeholder="you@company.com" /></label>
             </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">Projects</div>
-            <div>
-              <h3>Web Development + CMS</h3>
-              <p>Built and improved websites using JavaScript, Firebase, Sanity CMS, Git, and custom UI sections for client-facing content.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal">
-            <div class="timeline-date">Learning</div>
-            <div>
-              <h3>Computer Science + Data Path</h3>
-              <p>Studying computer science concepts while strengthening Python, SQL, databases, cloud fundamentals, and software engineering practices.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Final contact section with email and profile links -->
-    <section id="contact">
-      <div class="container">
-        <div class="contact-card reveal">
-          <div class="section-label">Contact</div>
-          <h2>Let’s build something useful.</h2>
-          <p>I’m interested in software engineering, data, automation, and business systems roles where I can combine technical work with practical problem solving.</p>
-          <div class="hero-actions" style="justify-content:center; margin-bottom:0;">
-            <a class="btn btn-primary" href="mailto:sebastianlevi2007@gmail.com">sebastianlevi2007@gmail.com</a>
-            <a class="btn btn-ghost" href="https://www.linkedin.com/in/sebastian-lopez-56096528a/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn-ghost" href="https://github.com/SaberSLayerk" target="_blank" rel="noopener">GitHub</a>
-          </div>
+            <label>What do you need?
+              <select name="projectType" required>
+                <option value="">Choose a project type</option>
+                <option>Cloud or DevOps consulting</option>
+                <option>Business website</option>
+                <option>WordPress or WooCommerce</option>
+                <option>Automation or business systems</option>
+                <option>Employment opportunity</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label>Project details<textarea name="message" rows="5" required placeholder="Tell me about your goal, timeline, and current setup..."></textarea></label>
+            <button class="button button-primary" type="submit">Create email <svg><use href="#icon-arrow"></use></svg></button>
+            <p class="form-note">This opens your email app with the project details prefilled. No information is stored on this website.</p>
+          </form>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Sebastian Lopez. Built with HTML, CSS, and JavaScript.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark">SL</span><span>Sebastian Lopez</span></a>
+      <p>Cloud infrastructure, web development, and practical automation.</p>
+      <div class="footer-right"><span>© <span id="year"></span></span><button id="copyEmail" type="button">Copy email <svg><use href="#icon-copy"></use></svg></button></div>
     </div>
   </footer>
 
-  <script>
-    // Grabs the mobile menu button and the nav link container from the page.
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navLinks = document.getElementById('navLinks');
+  <dialog class="project-modal" id="projectModal" aria-labelledby="modalTitle">
+    <div class="modal-shell">
+      <button class="modal-close icon-button" id="modalClose" type="button" aria-label="Close project details"><svg><use href="#icon-close"></use></svg></button>
+      <span class="modal-eyebrow" id="modalEyebrow"></span>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-summary" id="modalSummary"></p>
+      <div class="modal-grid">
+        <div><span>Challenge</span><p id="modalChallenge"></p></div>
+        <div><span>Solution</span><p id="modalSolution"></p></div>
+        <div><span>Impact</span><p id="modalImpact"></p></div>
+      </div>
+      <div class="modal-tech" id="modalTech"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </dialog>
 
-    // Opens or closes the mobile menu by toggling the .open class.
-    mobileToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-
-    // Closes the mobile menu after a user clicks a nav link.
-    // This prevents the dropdown from staying open after jumping to a section.
-    document.querySelectorAll('.nav-links a').forEach((link) => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
-
-    // Collects all project filter buttons and all project cards.
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    // Adds click behavior to each filter button.
-    filterButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        // Removes active styling from every button, then applies it to the clicked button.
-        filterButtons.forEach((btn) => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        // Reads the selected filter from data-filter, such as "web" or "data".
-        const filter = button.dataset.filter;
-
-        projectCards.forEach((card) => {
-          // Each project card can have one or more categories in data-category.
-          const categories = card.dataset.category.split(' ');
-
-          // Show all cards for "all", or only cards whose category matches the selected filter.
-          const shouldShow = filter === 'all' || categories.includes(filter);
-          card.style.display = shouldShow ? 'block' : 'none';
-        });
-      });
-    });
-
-    // Selects all elements that should animate into view while scrolling.
-    const revealElements = document.querySelectorAll('.reveal');
-
-    /*
-      IntersectionObserver watches elements as they enter the viewport.
-      When an element becomes visible, we add the .visible class to trigger the CSS animation.
-      observer.unobserve keeps the animation from repeatedly running every time you scroll.
-    */
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-
-    // Starts observing every reveal element on the page.
-    revealElements.forEach((element) => observer.observe(element));
-
-    // Automatically updates the footer year so it stays current.
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="index.js" defer></script>
 </body>
 </html>
