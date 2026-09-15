@@ -1046,6 +1046,86 @@ function initNetworkCanvas() {
   );
 }
 
+function initPortfolioCritter() {
+  const critterButton = $("#portfolioCritter");
+  const critter = $("#pixelCritter");
+  const message = $("#critterMessage");
+
+  if (!critterButton || !critter || !message) {
+    return;
+  }
+
+  const messages = [
+    "Thanks for stopping by!",
+    "Hey! You found me.",
+    "Let's build something cool.",
+    "Clouds are just someone else's computers ☁",
+    "Have you checked out my projects?",
+    "Need something automated?",
+    "I run on JavaScript and good decisions.",
+    "You can click me again, you know.",
+    "Okay... now we're friends.",
+    "Tell Sebastian I deserve a raise."
+  ];
+
+  let messageIndex = 0;
+
+  const blink = () => {
+    critter.classList.add("is-blinking");
+
+    window.setTimeout(() => {
+      critter.classList.remove("is-blinking");
+    }, 140);
+  };
+
+  const scheduleBlink = () => {
+    const delay = 2200 + Math.random() * 3500;
+
+    window.setTimeout(() => {
+      blink();
+      scheduleBlink();
+    }, delay);
+  };
+
+  const changeMessage = () => {
+    messageIndex = (messageIndex + 1) % messages.length;
+
+    message.classList.add("is-changing");
+
+    window.setTimeout(() => {
+      message.textContent = messages[messageIndex];
+      message.classList.remove("is-changing");
+    }, 160);
+  };
+
+  const jump = () => {
+    critter.classList.remove("is-jumping");
+
+    void critter.offsetWidth;
+
+    critter.classList.add("is-jumping");
+
+    window.setTimeout(() => {
+      critter.classList.remove("is-jumping");
+    }, 520);
+  };
+
+  critterButton.addEventListener("click", () => {
+    changeMessage();
+    jump();
+
+    critter.classList.add("is-happy");
+
+    window.setTimeout(() => {
+      critter.classList.remove("is-happy");
+    }, 900);
+  });
+
+  if (!reducedMotion) {
+    scheduleBlink();
+  }
+}
+
 function initYear() {
   const year = $("#year");
 
@@ -1068,4 +1148,5 @@ initCursorGlow();
 initTilt();
 initMagneticButtons();
 initNetworkCanvas();
+initPortfolioCritter();
 initYear();
